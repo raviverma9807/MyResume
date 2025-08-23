@@ -1,22 +1,22 @@
 trigger:
   branches:
     include:
-      - main   # change if your branch is different
+      - master
 
 pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  azureServiceConnection: 'AzureWebAppConnection'  # your service connection name
-  webAppName: 'your-webapp-name'                   # your Azure Web App name
-  resourceGroupName: 'your-resource-group'        # your resource group name
-  packagePath: '$(Build.SourcesDirectory)/wwwroot' # points to your wwwroot folder
+  azureServiceConnection: 'AzureWebAppConnection'
+  webAppName: 'your-webapp-name'                  
+  resourceGroupName: 'your-resource-group'       
+  packagePath: '$(Build.SourcesDirectory)/wwwroot'
 
 steps:
-  # 1?? Checkout repository
+ 
   - task: Checkout@1
 
-  # 2?? Zip the site
+ 
   - task: ArchiveFiles@2
     inputs:
       rootFolderOrFile: '$(packagePath)'
@@ -25,7 +25,7 @@ steps:
       archiveFile: '$(Build.ArtifactStagingDirectory)/site.zip'
       replaceExistingArchive: true
 
-  # 3?? Deploy to Azure Web App
+
   - task: AzureWebApp@1
     inputs:
       azureSubscription: '$(azureServiceConnection)'
