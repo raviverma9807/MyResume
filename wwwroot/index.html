@@ -13,6 +13,31 @@
             color: #333;
         }
 
+        header {
+            text-align: center;
+            border-bottom: 2px solid #16a085;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #16a085;
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #13856d;
+        }
+
         .container {
             max-width: 900px;
             margin: auto;
@@ -22,22 +47,15 @@
             border-radius: 8px;
         }
 
-        header {
-            text-align: center;
-            border-bottom: 2px solid #16a085;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #2c3e50;
         }
 
-            header h1 {
-                margin: 0;
-                font-size: 2.2rem;
-                color: #2c3e50;
-            }
-
-            header p {
-                margin: 5px 0;
-            }
+        header p {
+            margin: 5px 0;
+        }
 
         section {
             margin-bottom: 20px;
@@ -98,6 +116,7 @@
 <body>
     <div class="container">
         <header>
+            <a href="resume.pdf" download="Ravi-Verma-Resume.pdf" class="download-btn">Download Resume</a>
             <h1>Ravi Verma</h1>
             <p>📞 <a href="tel:+918953537586">+91 8953537586</a> | ✉️ <a href="mailto:raviverma9807@gmail.com">raviverma9807@gmail.com</a></p>
             <p>🔗 <a href="https://www.linkedin.com/in/ravi-verma-2b757817b/" target="_blank">LinkedIn Profile</a></p>
@@ -174,13 +193,12 @@
             <h2>Professional Experience</h2>
             <h3>Capgeminig, Noida — Consultant (Mar 2025 – Present)</h3>
             <ul>
-                <li>Developed applications using .NET Core 6/8, C#, and Minimal APIs.</li>
-                <li>Migrated various Azure resources from .NET 4 to .NET 8.</li>
-                <li>Worked on Azure Functions, APIM, Service Bus, and Notification Hub</li>
-                <li>Implemented Alerts on various resources like key-vaults, critical apis etc. using event grid</li>
-                <li>Worked closely on the incidents to understand the issues</li>
-                <li>Involved in direct communications with clients to resovle the production issues</li>
-                <li>Onboared multiple customers on our APIE.</li>
+                <li>Developed applications using <strong> .NET Core, C#, and Azure PaaS services</strong>, integrating solutions with <strong>Functions, APIM, Service Bus, Key-Vautl and Notification Hub</strong> etc.</li>
+                <li>Implemented proactive monitoring by configuring alerts on critical resources (<strong>Key Vaults, APIs</strong>, etc.) using <strong>Azure Event Grid</strong>, integrated with <strong>ServiceNow</strong> for automated incident ticketing.</li>
+                <li>Collaborated on incident management by analyzing issues, identifying root causes, and providing timely resolutions.</li>
+                <li>Acted as a client-facing engineer, engaging directly with stakeholders to resolve production issues and deliver technical support.</li>
+                <li>Identified Azure resources approaching retirement and migrated them to Long-Term Support (LTS) versions, ensuring compliance, stability, and uninterrupted business operations.</li>
+                <li>Successfully onboarded multiple customers onto the organization’s <strong>APIE</strong> platform, streamlining integration and adoption.</li>
             </ul>
 
             <h3>Tata Consultancy Services, Noida — System Engineer (Mar 2023 – Feb 2025)</h3>
@@ -197,6 +215,17 @@
                 <li>Developed web applications and production support using .NET Core & SQL Server.</li>
                 <li>Built MVC apps with Entity Framework and Angular.</li>
                 <li>Used ServiceNow for Incident, Problem, and Change management.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Personal Project</h2>
+            <ul>
+                <li>
+                    <b>Professional Career Chatbot</b> —
+                    I designed and deployed an AI chatbot to showcase my professional journey and provide interactive career insights.
+                    <a href="https://raviverma.streamlit.app" target="_blank">Try it here</a>
+                </li>
             </ul>
         </section>
 
@@ -232,9 +261,9 @@
             </div>
         </section>
 
-        <!--<footer>
+        <footer>
             <p>© 2025 Ravi Verma | Hosted on Azure</p>
-        </footer>-->
+        </footer>
     </div>
 </body>
 </html>
