@@ -21,6 +21,39 @@
             position: relative;
         }
 
+
+        .download-btn .mobile-icon {
+            display: none; /* hide icon on desktop */
+        }
+
+        .download-btn .desktop-text {
+            display: inline; /* show text on desktop */
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .download-btn .desktop-text {
+                display: none; /* hide text on mobile */
+            }
+
+            .download-btn .mobile-icon {
+                display: inline; /* show icon on mobile */
+            }
+
+            .download-btn {
+                position: absolute; /* top-right corner */
+                top: 10px;
+                right: 10px;
+                padding: 6px 10px;
+                font-size: 1rem;
+            }
+
+                .download-btn:hover {
+                    background: #13856d;
+                }
+        }
+
+        /* Desktop button style */
         .download-btn {
             position: absolute;
             top: 20px;
@@ -37,6 +70,7 @@
             .download-btn:hover {
                 background: #13856d;
             }
+
 
         .container {
             max-width: 900px;
@@ -117,7 +151,10 @@
 <body>
     <div class="container">
         <header>
-            <a href="resume.pdf" download="Ravi-Verma-Resume.pdf" class="download-btn">Download Resume</a>
+            <a href="resume.pdf" class="download-btn">
+                <span class="desktop-text">Download Resume</span>
+                <span class="mobile-icon">⬇️</span> <!-- Unicode download icon -->
+            </a>
             <h1>Ravi Verma</h1>
             <p>
                 📞 <a href="tel:+918953537586">+91 8953537586</a> |
